@@ -65,7 +65,6 @@ const Catalog = {
             switcher = document.createElement('button');
             switcher.id = 'view-switcher';
             switcher.className = 'btn btn-secondary';
-            switcher.style.marginLeft = '10px';
             filtersHeader.appendChild(switcher);
         }
         
