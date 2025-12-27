@@ -1,0 +1,260 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet - średnie ekrany */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .builder-container {
+        gap: 30px;
+    }
+}
+
+/* Mobile - małe ekrany */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Nawigacja */
+    .nav-tabs {
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .nav-tab {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    /* Filtry */
+    .filters {
+        flex-direction: column;
+    }
+
+    select {
+        width: 100%;
+        min-width: auto;
+    }
+
+    /* Karty */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card-image {
+        height: 240px;
+        font-size: 5rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    /* Builder */
+    .builder-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .match-image {
+        aspect-ratio: 1 / 1;
+        max-width: 350px;
+        font-size: 6rem;
+    }
+
+    /* Admin */
+    .admin-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-header h2 {
+        margin-bottom: 10px;
+    }
+
+    .admin-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .admin-item-left {
+        width: 100%;
+    }
+
+    .admin-actions {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .admin-actions .btn {
+        flex: 1;
+        justify-content: center;
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    /* Modal */
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        padding: 20px;
+        max-height: 95vh;
+    }
+
+    .modal-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .image-preview {
+        width: 150px;
+        height: 150px;
+        font-size: 3rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .modal-actions .btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+}
+
+/* Bardzo małe ekrany */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card-image {
+        height: 200px;
+        font-size: 4rem;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .admin-thumb {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .admin-info h3 {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .match-image {
+        aspect-ratio: 1 / 1;
+        max-width: 280px;
+        font-size: 5rem;
+    }
+}
+
+/* Bardzo duże ekrany */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Orientacja pozioma na urządzeniach mobilnych */
+@media (max-height: 600px) and (orientation: landscape) {
+    .modal-content {
+        max-height: 85vh;
+    }
+
+    .match-image {
+        aspect-ratio: 1 / 1;
+        max-width: 300px;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+}
+
+/* Tryb druku */
+@media print {
+    body {
+        background: white;
+        color: black;
+        padding: 0;
+    }
+
+    .nav-tabs,
+    .filters,
+    .favorite-btn,
+    .admin-actions,
+    .btn,
+    footer {
+        display: none !important;
+    }
+
+    .card,
+    .admin-item {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+
+    .card-image,
+    .admin-thumb {
+        background: #f0f0f0;
+    }
+}
+
+/* Preferencje użytkownika - reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Preferencje użytkownika - dark mode (już jest ciemny, ale dla kompletności) */
+@media (prefers-color-scheme: light) {
+    /* Opcjonalnie: możesz dodać jasny motyw tutaj w przyszłości */
+}

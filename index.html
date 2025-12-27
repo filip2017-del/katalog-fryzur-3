@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Katalog fryzur męskich - znajdź idealną fryzurę dla siebie">
+    <meta name="keywords" content="fryzury męskie, katalog fryzur, fryzjer, stylizacja">
+    <title>Katalog Fryzur Męskich</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💇</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1>Katalog Fryzur Męskich</h1>
+            <nav class="nav-tabs">
+                <button class="nav-tab active" data-tab="catalog">
+                    Katalog fryzur
+                </button>
+                <button class="nav-tab" data-tab="builder">
+                    Wybierz swoją fryzurę
+                </button>
+                <button class="nav-tab" data-tab="admin">
+                    Admin
+                </button>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- KATALOG -->
+            <section id="catalog" class="content-section active">
+                <div class="filters">
+                    <button id="favorites-filter-btn" class="btn btn-secondary" title="Pokaż polubione fryzury">
+                        ❤️ Polubione
+                    </button>
+                    <select id="filter-length" aria-label="Filtruj według długości">
+                        <option value="all">Długość włosów</option>
+                        <option value="Krótkie">Krótkie</option>
+                        <option value="Średnie">Średnie</option>
+                        <option value="Długie">Długie</option>
+                    </select>
+                    <select id="filter-style" aria-label="Filtruj według stylu">
+                        <option value="all">Styl</option>
+                        <option value="Klasyczny">Klasyczny</option>
+                        <option value="Nowoczesny">Nowoczesny</option>
+                        <option value="Retro">Retro</option>
+                        <option value="Alternatywny">Alternatywny</option>
+                    </select>
+                </div>
+                <div id="catalog-grid" class="cards-grid"></div>
+            </section>
+
+            <!-- BUILDER -->
+            <section id="builder" class="content-section">
+                <div class="builder-container">
+                    <div class="builder-filters">
+                        <div class="builder-info">
+                            <h3>Wybierz preferencje:</h3>
+                            <p>Na podstawie Twoich wyborów dopasujemy idealną fryzurę</p>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="builder-sides">Boki</label>
+                            <select id="builder-sides">
+                                <option value="mid-fade">Mid fade (średnie wygolenie)</option>
+                                <option value="low-fade">Low fade (niskie wygolenie)</option>
+                                <option value="high-fade">High fade (wysokie wygolenie)</option>
+                                <option value="undercut">Undercut (podcięcie)</option>
+                                <option value="uniform">Jednolite</option>
+                                <option value="long">Długie</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="builder-top">Góra</label>
+                            <select id="builder-top">
+                                <option value="with-volume">Z objętością</option>
+                                <option value="slick">Zaczesane</option>
+                                <option value="textured">Teksturowane</option>
+                                <option value="messy">Rozczochrane</option>
+                                <option value="short">Krótkie</option>
+                                <option value="long">Długie</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="builder-bangs">Grzywka</label>
+                            <select id="builder-bangs">
+                                <option value="with-texture">Z teksturą</option>
+                                <option value="swept">Zaczesana</option>
+                                <option value="curtain">Kurtynowa</option>
+                                <option value="none">Brak</option>
+                                <option value="long">Długa</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="builder-style">Styl</label>
+                            <select id="builder-style">
+                                <option value="modern">Nowoczesny</option>
+                                <option value="classic">Klasyczny</option>
+                                <option value="retro">Retro</option>
+                                <option value="alternative">Alternatywny</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="match-result" class="match-result"></div>
+                </div>
+            </section>
+
+            <!-- ADMIN -->
+            <section id="admin" class="content-section">
+                <div class="admin-header">
+                    <h2>Edytor</h2>
+                    <button class="btn btn-primary" id="add-hairstyle-btn">
+                        ➕ Dodaj nową fryzurę
+                    </button>
+                </div>
+                <div id="admin-list" class="admin-list"></div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            © 2025 Katalog Fryzur Męskich
+        </footer>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Edytuj fryzurę</h2>
+                <button class="modal-close" id="modal-close" aria-label="Zamknij">✕</button>
+            </div>
+            
+            <form id="hairstyle-form">
+                <div class="image-upload">
+                    <div id="form-image-preview" class="image-preview" role="img" aria-label="Podgląd zdjęcia">
+                        ✂️
+                    </div>
+                    <label class="file-input-label">
+                        📤 Zmień zdjęcie
+                        <input type="file" id="image-input" accept="image/*" aria-label="Wybierz zdjęcie">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="form-name">Nazwa fryzury *</label>
+                    <input type="text" id="form-name" required placeholder="np. Pompadour">
+                </div>
+
+                <div class="form-group">
+                    <label for="form-length">Długość</label>
+                    <input type="text" id="form-length" placeholder="np. Krótkie, Średnie">
+                </div>
+
+                <div class="form-group">
+                    <label for="form-style">Styl</label>
+                    <input type="text" id="form-style" placeholder="np. Klasyczny, Retro">
+                </div>
+
+                <div class="form-group">
+                    <label for="form-description">Opis *</label>
+                    <textarea id="form-description" required placeholder="Opisz fryzurę..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="form-tags">Tagi (oddzielone przecinkami)</label>
+                    <input type="text" id="form-tags" placeholder="np. Krótkie, Klasyczny, Nowoczesny">
+                </div>
+
+                <div class="form-group">
+                    <label for="form-type">Typ *</label>
+                    <select id="form-type" required>
+                        <option value="">Wybierz typ</option>
+                        <option value="parent">Parent (główna fryzura)</option>
+                        <option value="child">Child (wariant)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="form-childrenIds">ID wariantów (oddzielone przecinkami)</label>
+                    <input type="text" id="form-childrenIds" placeholder="np. 11, 12, 13">
+                </div>
+
+                <div class="form-group">
+                    <label for="form-parentIds">ID rodziców (oddzielone przecinkami)</label>
+                    <input type="text" id="form-parentIds" placeholder="np. 1, 2">
+                </div>
+
+                <div style="border-top: 1px solid #374151; padding-top: 20px; margin-top: 20px;">
+                    <h4 style="color: #fff; margin-bottom: 15px; font-size: 0.95rem;">Atrybuty</h4>
+                    
+                    <div class="form-group">
+                        <label for="form-sides">Boki</label>
+                        <select id="form-sides">
+                            <option value="">Brak</option>
+                            <option value="mid-fade">Mid fade</option>
+                            <option value="low-fade">Low fade</option>
+                            <option value="high-fade">High fade</option>
+                            <option value="undercut">Undercut</option>
+                            <option value="uniform">Jednolite</option>
+                            <option value="long">Długie</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-top">Góra</label>
+                        <select id="form-top">
+                            <option value="">Brak</option>
+                            <option value="with-volume">Z objętością</option>
+                            <option value="slick">Zaczesane</option>
+                            <option value="textured">Teksturowane</option>
+                            <option value="messy">Rozczochrane</option>
+                            <option value="short">Krótkie</option>
+                            <option value="long">Długie</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-bangs">Grzywka</label>
+                        <select id="form-bangs">
+                            <option value="">Brak</option>
+                            <option value="with-texture">Z teksturą</option>
+                            <option value="swept">Zaczesana</option>
+                            <option value="curtain">Kurtynowa</option>
+                            <option value="none">Brak</option>
+                            <option value="long">Długa</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-attr-style">Styl atrybutu</label>
+                        <select id="form-attr-style">
+                            <option value="">Brak</option>
+                            <option value="classic">Klasyczny</option>
+                            <option value="modern">Nowoczesny</option>
+                            <option value="alternative">Alternatywny</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="form-emoji">Emoji</label>
+                    <input type="text" id="form-emoji" placeholder="np. 👨‍🦱" maxlength="2">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">
+                        💾 Zapisz
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="modal-cancel">
+                        Anuluj
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/hairstyles-data.js"></script>
+    <script src="js/utils/storage.js"></script>
+    <script src="js/utils/matching.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/components/catalog.js"></script>
+    <script src="js/components/builder.js"></script>
+    <script src="js/components/admin.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
