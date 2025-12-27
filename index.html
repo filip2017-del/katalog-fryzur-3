@@ -37,10 +37,16 @@
         <main>
             <!-- KATALOG -->
             <section id="catalog" class="content-section active">
-                <div class="filters">
+                <div class="filters-header">
+                    <button id="toggle-filters-btn" class="btn btn-secondary">
+                        🔧 Filtry
+                    </button>
                     <button id="favorites-filter-btn" class="btn btn-secondary" title="Pokaż polubione fryzury">
                         ❤️ Polubione
                     </button>
+                </div>
+                <div id="filters-panel" class="filters-panel collapsed">
+                    <div class="filters">
                     <select id="filter-length" aria-label="Filtruj według długości">
                         <option value="all">Długość włosów</option>
                         <option value="Krótkie">Krótkie</option>
@@ -54,6 +60,8 @@
                         <option value="Retro">Retro</option>
                         <option value="Alternatywny">Alternatywny</option>
                     </select>
+                </div>
+                </div>
                 </div>
                 <div id="catalog-grid" class="cards-grid"></div>
             </section>

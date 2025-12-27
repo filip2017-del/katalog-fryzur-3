@@ -129,6 +129,12 @@ const App = {
      * Inicjalizuje katalog
      */
     initCatalog() {
+        // Toggle filtry
+        document.getElementById('toggle-filters-btn').addEventListener('click', () => {
+            const panel = document.getElementById('filters-panel');
+            panel.classList.toggle('collapsed');
+        });
+        
         // Filtry
         document.getElementById('filter-length').addEventListener('change', (e) => {
             this.state.filters.length = e.target.value;

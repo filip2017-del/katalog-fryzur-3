@@ -58,15 +58,15 @@ const Catalog = {
      * Renderuje przełącznik widoku
      */
     renderViewSwitcher() {
-        const filtersDiv = document.querySelector('.filters');
+        const filtersHeader = document.querySelector('.filters-header');
         let switcher = document.getElementById('view-switcher');
         
         if (!switcher) {
             switcher = document.createElement('button');
             switcher.id = 'view-switcher';
             switcher.className = 'btn btn-secondary';
-            switcher.style.marginLeft = 'auto';
-            filtersDiv.appendChild(switcher);
+            switcher.style.marginLeft = '10px';
+            filtersHeader.appendChild(switcher);
         }
         
         switcher.innerHTML = '🌳 Widok drzewa';
@@ -412,18 +412,17 @@ const Catalog = {
         const grid = document.getElementById('catalog-grid');
         
         // Dodaj przycisk powrotu
-        const filtersDiv = document.querySelector('.filters');
+        const filtersHeader = document.querySelector('.filters-header');
         let backBtn = document.getElementById('favorites-back-btn');
         
         if (!backBtn) {
             backBtn = document.createElement('button');
             backBtn.id = 'favorites-back-btn';
             backBtn.className = 'btn btn-secondary';
-            backBtn.style.marginRight = 'auto';
-            backBtn.innerHTML = '← Powrót do katalogu';
-            filtersDiv.insertBefore(backBtn, filtersDiv.firstChild);
+            filtersHeader.insertBefore(backBtn, filtersHeader.firstChild);
         }
         
+        backBtn.innerHTML = '← Powrót do katalogu';
         backBtn.onclick = () => {
             this.currentView = 'main';
             App.renderCurrentTab();
