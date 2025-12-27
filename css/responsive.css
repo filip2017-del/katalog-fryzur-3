@@ -158,6 +158,15 @@
         margin-top: 40px;
         padding-top: 20px;
     }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer .nav-tab {
+        width: 100%;
+    }
 }
 
 /* Bardzo małe ekrany */
