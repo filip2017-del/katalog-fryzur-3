@@ -1,4 +1,23 @@
 @media (max-width: 768px) {
+    .tree-node img {
+        width: 36px !important;
+        height: 36px !important;
+        aspect-ratio: 1 / 1 !important;
+        border-radius: 6px !important;
+    }
+    .tree-child-card img {
+        width: 100% !important;
+        height: 60px !important;
+        aspect-ratio: 1 / 1 !important;
+        border-radius: 6px !important;
+    }
+    .tree-child-card div[style*="font-size: 2.5rem"] {
+        height: 60px !important;
+        aspect-ratio: 1 / 1 !important;
+        font-size: 2rem !important;
+    }
+}
+@media (max-width: 768px) {
     .card-image {
         aspect-ratio: 1 / 1;
         height: auto !important;
