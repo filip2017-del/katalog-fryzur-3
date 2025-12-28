@@ -67,11 +67,7 @@
       "image": "images/curtain_bangs.jpg",
       "emoji": "👨",
       "type": "parent",
-      "childrenIds": [
-        24,
-        25,
-        30
-      ],
+      "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "textured",
@@ -113,9 +109,7 @@
       "image": "images/slick_back.jpg",
       "emoji": "🧔",
       "type": "parent",
-      "childrenIds": [
-        35
-      ],
+      "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "slick",
@@ -456,17 +450,14 @@
       ],
       "image": "images/caesar_cut.jpg",
       "emoji": "💇‍♂️",
-      "type": "child",
+      "type": "parent",
       "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "short",
         "bangs": "none",
         "style": "modern"
-      },
-      "parentIds": [
-        28
-      ]
+      }
     },
     {
       "id": 21,
@@ -480,17 +471,14 @@
       ],
       "image": "images/crop2.jpg",
       "emoji": "💇‍♂️",
-      "type": "child",
+      "type": "parent",
       "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "short",
         "bangs": "none",
         "style": "modern"
-      },
-      "parentIds": [
-        28
-      ]
+      }
     },
     {
       "id": 22,
@@ -512,10 +500,7 @@
         "bangs": "none",
         "style": "modern"
       },
-      "parentIds": [
-        21,
-        28
-      ]
+      "parentIds": []
     },
     {
       "id": 23,
@@ -550,17 +535,14 @@
       ],
       "image": "images/curtain_bangs2.jpg",
       "emoji": "💇‍♂️",
-      "type": "child",
+      "type": "parent",
       "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "textured",
         "bangs": "curtain",
         "style": "modern"
-      },
-      "parentIds": [
-        3
-      ]
+      }
     },
     {
       "id": 25,
@@ -582,9 +564,7 @@
         "bangs": "curtain",
         "style": "modern"
       },
-      "parentIds": [
-        3
-      ]
+      "parentIds": []
     },
     {
       "id": 26,
@@ -620,9 +600,7 @@
       "image": "images/flufy_hair.jpeg",
       "emoji": "💇‍♂️",
       "type": "parent",
-      "childrenIds": [
-        37
-      ],
+      "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "fluffy",
@@ -643,12 +621,7 @@
       "image": "images/french_crop.jpg",
       "emoji": "💇‍♂️",
       "type": "parent",
-      "childrenIds": [
-        36,
-        22,
-        21,
-        20
-      ],
+      "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "short",
@@ -668,17 +641,14 @@
       ],
       "image": "images/middle_part.jpg",
       "emoji": "💇‍♂️",
-      "type": "child",
+      "type": "parent",
       "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "medium",
         "bangs": "curtain",
         "style": "modern"
-      },
-      "parentIds": [
-        3
-      ]
+      }
     },
     {
       "id": 31,
@@ -776,17 +746,14 @@
       ],
       "image": "images/slick_back2.jpg",
       "emoji": "💇‍♂️",
-      "type": "child",
+      "type": "parent",
       "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "slick",
         "bangs": "swept",
         "style": "classic"
-      },
-      "parentIds": [
-        5
-      ]
+      }
     },
     {
       "id": 36,
@@ -800,17 +767,14 @@
       ],
       "image": "images/textured_crop2.jpg",
       "emoji": "💇‍♂️",
-      "type": "child",
+      "type": "parent",
       "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "textured",
         "bangs": "none",
         "style": "modern"
-      },
-      "parentIds": [
-        28
-      ]
+      }
     },
     {
       "id": 37,
@@ -824,17 +788,14 @@
       ],
       "image": "images/textured_fringe2.jpg",
       "emoji": "💇‍♂️",
-      "type": "child",
+      "type": "parent",
       "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "textured",
         "bangs": "with-texture",
         "style": "modern"
-      },
-      "parentIds": [
-        27
-      ]
+      }
     },
     {
       "id": 38,

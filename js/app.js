@@ -27,40 +27,30 @@ const App = {
      */
     init() {
         CONFIG.log('Inicjalizacja aplikacji...');
-        
-        // Wyczyść stare dane jeśli istnieją i nie mają zdjęć lub type property
-        const existingData = Storage.load(CONFIG.storageKey);
-        if (existingData && existingData.length > 0 && (!existingData[0].image || !existingData[0].type)) {
-            CONFIG.log('Usuwanie starych danych bez zdjęć lub type property...');
-            Storage.remove(CONFIG.storageKey);
-            Storage.remove(CONFIG.favoritesKey);
-        }
-        
-        // Wczytaj dane
-        this.loadData();
-        
-        // Inicjalizuj komponenty
-        this.initTabs();
-        this.initCatalog();
-        this.initBuilder();
-        this.initAdmin();
-        this.initModal();
-        
-        // Renderuj początkowy widok
-        this.renderCurrentTab();
-        
-        CONFIG.log('Aplikacja zainicjalizowana pomyślnie');
+        // Wczytaj dane asynchronicznie
+        this.loadData().then(() => {
+            this.initTabs();
+            this.initCatalog();
+            this.initBuilder();
+            this.initAdmin();
+            this.initModal();
+            this.renderCurrentTab();
+            CONFIG.log('Aplikacja zainicjalizowana pomyślnie');
+        });
     },
 
     /**
      * Wczytuje dane z localStorage
      */
     loadData() {
-        this.state.hairstyles = loadHairstyles();
-        this.state.favorites = loadFavorites();
-        CONFIG.log('Wczytano dane:', {
-            hairstyles: this.state.hairstyles.length,
-            favorites: this.state.favorites.length
+        // Asynchroniczne ładowanie fryzur z JSON
+        return loadHairstyles().then(hairstyles => {
+            this.state.hairstyles = hairstyles;
+            this.state.favorites = loadFavorites();
+            CONFIG.log('Wczytano dane:', {
+                hairstyles: this.state.hairstyles.length,
+                favorites: this.state.favorites.length
+            });
         });
     },
 
@@ -198,6 +188,36 @@ const App = {
             this.state.editingHairstyle = null;
             Modal.open(null);
         });
+
+        // Eksport JSON (góra i dół)
+        const exportBtns = [
+            document.getElementById('export-json-btn'),
+            document.getElementById('export-json-btn-bottom')
+        ].filter(Boolean);
+        exportBtns.forEach(exportBtn => {
+            exportBtn.addEventListener('click', () => {
+                const data = {
+                    version: '1.0',
+                    lastUpdated: new Date().toISOString().slice(0, 10),
+                    hairstyles: this.state.hairstyles
+                };
+                const json = JSON.stringify(data, null, 2);
+                const blob = new Blob([json], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'hairstyles.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+        });
+
+        // Inicjalizuj edytor relacji
+        if (document.getElementById('relations-editor')) {
+            RelationsEditor.render(this.state);
+        }
     },
 
     /**

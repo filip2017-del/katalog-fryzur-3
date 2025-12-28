@@ -125,15 +125,15 @@ function saveHairstyles(hairstyles) {
  * @returns {Array} - Tablica fryzur
  */
 function loadHairstyles() {
-    const stored = Storage.load(CONFIG.storageKey);
-    if (stored && Array.isArray(stored) && stored.length > 0) {
-        // Sprawdź czy dane mają wymagane właściwości (type, image)
-        if (stored[0].type && stored[0].image) {
-            return stored;
-        }
-    }
-    // Jeśli brak danych lub dane są stare, zwróć początkowe dane
-    return getInitialHairstyles();
+    // Ładuj fryzury tylko z pliku JSON (asynchronicznie)
+    // UWAGA: Funkcja zwraca Promise!
+    return fetch('data/hairstyles.json')
+        .then(response => response.json())
+        .then(data => Array.isArray(data.hairstyles) ? data.hairstyles : [])
+        .catch(err => {
+            console.error('Błąd ładowania fryzur z JSON:', err);
+            return [];
+        });
 }
 
 /**
