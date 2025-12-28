@@ -77,12 +77,16 @@ const App = {
      * Inicjalizuje system zakładek
      */
     initTabs() {
-        const tabs = document.querySelectorAll('.nav-tab');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const tabName = tab.dataset.tab;
-                this.switchTab(tabName);
-            });
+        // Użyj event delegation aby obsłużyć wszystkie nav-tab przyciski
+        document.addEventListener('click', (e) => {
+            const button = e.target.closest('.nav-tab');
+            if (button) {
+                const tabName = button.dataset.tab;
+                if (tabName) {
+                    e.preventDefault();
+                    this.switchTab(tabName);
+                }
+            }
         });
     },
 
@@ -94,12 +98,20 @@ const App = {
         
         // Aktualizuj nawigację
         document.querySelectorAll('.nav-tab').forEach(tab => {
-            tab.classList.toggle('active', tab.dataset.tab === tabName);
+            if (tab.dataset.tab === tabName) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
         });
         
         // Aktualizuj sekcje
         document.querySelectorAll('.content-section').forEach(section => {
-            section.classList.toggle('active', section.id === tabName);
+            if (section.id === tabName) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
         });
         
         // Renderuj odpowiednią sekcję
@@ -112,16 +124,18 @@ const App = {
      * Renderuje aktualnie aktywną zakładkę
      */
     renderCurrentTab() {
-        switch(this.state.currentTab) {
-            case 'catalog':
-                Catalog.render(this.state);
-                break;
-            case 'builder':
-                Builder.render(this.state);
-                break;
-            case 'admin':
-                Admin.render(this.state);
-                break;
+        if (this.state.currentTab === 'catalog') {
+            Catalog.render(this.state);
+        } else if (this.state.currentTab === 'builder') {
+            Builder.render(this.state);
+            // Dodatkowo czyścimy katalog-grid, by nie był widoczny
+            const grid = document.getElementById('catalog-grid');
+            if (grid) grid.innerHTML = '';
+        } else if (this.state.currentTab === 'admin') {
+            Admin.render(this.state);
+            // Dodatkowo czyścimy katalog-grid, by nie był widoczny
+            const grid = document.getElementById('catalog-grid');
+            if (grid) grid.innerHTML = '';
         }
     },
 
@@ -138,12 +152,16 @@ const App = {
         // Filtry
         document.getElementById('filter-length').addEventListener('change', (e) => {
             this.state.filters.length = e.target.value;
-            Catalog.render(this.state);
+            if (this.state.currentTab === 'catalog') {
+                Catalog.render(this.state);
+            }
         });
         
         document.getElementById('filter-style').addEventListener('change', (e) => {
             this.state.filters.style = e.target.value;
-            Catalog.render(this.state);
+            if (this.state.currentTab === 'catalog') {
+                Catalog.render(this.state);
+            }
         });
         
         // Przycisk polubionych
@@ -264,7 +282,9 @@ const App = {
         }
         
         this.saveData();
-        Catalog.render(this.state);
+        if (this.state.currentTab === 'catalog') {
+            Catalog.render(this.state);
+        }
     },
 
     /**

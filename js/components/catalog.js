@@ -213,6 +213,9 @@ const Catalog = {
     renderTreeView(state) {
         const grid = document.getElementById('catalog-grid');
         
+        // Ukryj przycisk widoku drzewa (bo już jesteśmy w nim)
+        document.getElementById('view-switcher')?.remove();
+        
         // Jeśli jesteśmy w kontekście wariantów, pokaż tylko to drzewo
         const isLocalContext = this.currentParentId !== null;
         const parents = isLocalContext 
@@ -409,6 +412,9 @@ const Catalog = {
         const favorites = state.hairstyles.filter(h => state.favorites.includes(h.id));
         const filtered = this.filterHairstyles(favorites, state.filters);
         const grid = document.getElementById('catalog-grid');
+        
+        // Ukryj przycisk widoku drzewa
+        document.getElementById('view-switcher')?.remove();
         
         // Dodaj przycisk powrotu
         const filtersHeader = document.querySelector('.filters-header');
