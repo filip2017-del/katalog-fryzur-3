@@ -66,27 +66,83 @@ http://localhost:8000
 
 ## 📊 Struktura Danych Fryzury
 
+
 ```javascript
 {
-  id: 1,
-  name: 'Pompadour',
-  length: 'Krótkie, Średnie',
-  style: 'Klasyczny, Retro',
-  description: 'Opis fryzury...',
-  tags: ['Średnie', 'Klasyczny'],
-  image: 'images/pompadour.jpg',
-  emoji: '👨‍🦱',
-  type: 'parent',           // 'parent' lub 'child'
-  childrenIds: [11, 12, 13],
-  parentIds: [],
+  id: 10,
+  name: 'Fade',
+  length: 'Krótkie',
+  style: 'Nowoczesny',
+  description: 'Stopniowo skracane włosy od góry do boków. Czysty, nowoczesny wygląd.',
+  tags: ['Krótkie', 'Nowoczesny'],
+  image: 'images/taper_fade.jpg',
+  emoji: '💈',
+  type: 'parent',
+  childrenIds: [101, 102, 103, 104, 105, 106],
   attributes: {
-    sides: 'mid-fade',
-    top: 'with-volume',
-    bangs: 'swept',
-    style: 'classic'
+    sides: 'high-fade',
+    top: 'short',
+    bangs: 'none',
+    style: 'modern'
   }
 }
+// Przykładowe dzieci Fade:
+{
+  id: 101,
+  name: 'Low Fade',
+  parentIds: [10],
+  description: 'Cieniowanie zaczyna się nisko, tuż nad linią karku i uszu. Subtelny, klasyczny efekt.',
+  image: 'images/low_fade.jpg',
+  ...
+}
+{
+  id: 102,
+  name: 'Mid Fade',
+  parentIds: [10],
+  description: 'Startuje mniej więcej w połowie głowy. Najbardziej uniwersalny i popularny.',
+  image: 'images/mid_fade.jpg',
+  ...
+}
+{
+  id: 103,
+  name: 'High Fade',
+  parentIds: [10],
+  description: 'Cieniowanie zaczyna się wysoko, blisko skroni. Mocny kontrast, nowoczesny wygląd.',
+  image: 'images/high_fade.jpg',
+  ...
+}
+{
+  id: 104,
+  name: 'Taper Fade',
+  parentIds: [10],
+  description: 'Delikatne cieniowanie tylko przy karku i bokach, reszta włosów zostaje dłuższa. Bardziej konserwatywny styl.',
+  image: 'images/taper_fade.jpg',
+  ...
+}
+{
+  id: 105,
+  name: 'Drop Fade',
+  parentIds: [10],
+  description: 'Linia fade „opada” z tyłu głowy, dopasowując się do kształtu czaszki.',
+  image: 'images/drop_fade.jpg',
+  ...
+}
+{
+  id: 106,
+  name: 'Burst Fade',
+  parentIds: [10],
+  description: 'Cieniowanie w kształcie półkola wokół ucha; często łączone z mohawkiem.',
+  image: 'images/burst_fade.jpg',
+  ...
+}
 ```
+
+> **Uwaga:** Aby wszystkie warianty Fade wyświetlały się poprawnie, dodaj brakujące pliki graficzne do katalogu `images/`:
+> - low_fade.jpg
+> - mid_fade.jpg
+> - high_fade.jpg
+> - drop_fade.jpg
+> - burst_fade.jpg
 
 ## 🎨 Komponenty
 
