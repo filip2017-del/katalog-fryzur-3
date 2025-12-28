@@ -224,6 +224,27 @@ const App = {
      * Inicjalizuje modal
      */
     initModal() {
+                // Obsługa duplikowania fryzury
+                const duplicateBtn = document.getElementById('modal-duplicate');
+                if (duplicateBtn) {
+                    duplicateBtn.addEventListener('click', () => {
+                        if (!this.state.editingHairstyle) return;
+                        const orig = this.state.editingHairstyle;
+                        // Głęboka kopia bez referencji do parentIds/childrenIds
+                        const copy = JSON.parse(JSON.stringify(orig));
+                        // Nowe id: max istniejące + 1
+                        const newId = Math.max(...this.state.hairstyles.map(h => h.id)) + 1;
+                        copy.id = newId;
+                        copy.name = orig.name + ' (kopia)';
+                        // Usuwamy powiązania z rodzicami/dziećmi
+                        copy.parentIds = Array.isArray(copy.parentIds) ? [] : copy.parentIds;
+                        copy.childrenIds = Array.isArray(copy.childrenIds) ? [] : copy.childrenIds;
+                        this.state.hairstyles.push(copy);
+                        this.saveData();
+                        Modal.close();
+                        this.renderCurrentTab();
+                    });
+                }
         document.getElementById('modal-close').addEventListener('click', () => {
             Modal.close();
         });

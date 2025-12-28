@@ -163,7 +163,8 @@
       "emoji": "🧑",
       "type": "parent",
       "childrenIds": [
-        19
+        19,
+        33
       ],
       "attributes": {
         "sides": "mid-fade",
@@ -734,14 +735,17 @@
       ],
       "image": "images/short_quiff.jpg",
       "emoji": "💇‍♂️",
-      "type": "parent",
+      "type": "child",
       "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "short",
         "bangs": "none",
         "style": "modern"
-      }
+      },
+      "parentIds": [
+        7
+      ]
     },
     {
       "id": 34,
