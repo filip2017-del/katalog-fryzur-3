@@ -450,7 +450,8 @@
       "type": "parent",
       "childrenIds": [
         20,
-        21
+        21,
+        34
       ],
       "attributes": {
         "sides": "uniform",
@@ -782,14 +783,17 @@
       ],
       "image": "images/man_bun.jpg",
       "emoji": "👨‍🦰",
-      "type": "parent",
+      "type": "child",
       "childrenIds": [],
       "attributes": {
         "sides": "long",
         "top": "long",
         "bangs": "long",
         "style": "alternative"
-      }
+      },
+      "parentIds": [
+        38
+      ]
     },
     {
       "id": 34,
@@ -803,14 +807,17 @@
       ],
       "image": "images/crew_cut.jpg",
       "emoji": "👨‍✈️",
-      "type": "parent",
+      "type": "child",
       "childrenIds": [],
       "attributes": {
         "sides": "low-fade",
         "top": "short",
         "bangs": "none",
         "style": "classic"
-      }
+      },
+      "parentIds": [
+        19
+      ]
     },
     {
       "id": 35,
@@ -871,14 +878,17 @@
       ],
       "image": "images/curly.jpg",
       "emoji": "💇‍♂️",
-      "type": "parent",
+      "type": "child",
       "childrenIds": [],
       "attributes": {
         "sides": "mid-fade",
         "top": "curly",
         "bangs": "none",
         "style": "modern"
-      }
+      },
+      "parentIds": [
+        41
+      ]
     },
     {
       "id": 38,
@@ -896,7 +906,8 @@
       "childrenIds": [
         39,
         40,
-        44
+        44,
+        33
       ],
       "attributes": {
         "sides": "undercut",
@@ -968,7 +979,8 @@
       "type": "parent",
       "childrenIds": [
         43,
-        42
+        42,
+        37
       ],
       "attributes": {
         "sides": "long",
