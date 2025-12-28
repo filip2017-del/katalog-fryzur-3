@@ -3,7 +3,7 @@
   "lastUpdated": "2025-12-28",
   "hairstyles": [
     {
-      "id": 1,
+      "id": 10,
       "name": "Rodzaje Fade",
       "length": "Krótkie",
       "style": "Nowoczesny",
@@ -16,12 +16,12 @@
       "emoji": "💈",
       "type": "parent",
       "childrenIds": [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
       ],
       "attributes": {
         "sides": "high-fade",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "id": 2,
+      "id": 101,
       "name": "Low Fade",
       "length": "Krótkie",
       "style": "Klasyczny",
@@ -44,7 +44,7 @@
       "emoji": "⬇️",
       "type": "child",
       "parentIds": [
-        1
+        10
       ],
       "attributes": {
         "sides": "low-fade",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": 3,
+      "id": 102,
       "name": "Mid Fade",
       "length": "Krótkie",
       "style": "Uniwersalny",
@@ -67,7 +67,7 @@
       "emoji": "↔️",
       "type": "child",
       "parentIds": [
-        1
+        10
       ],
       "attributes": {
         "sides": "mid-fade",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": 4,
+      "id": 103,
       "name": "High Fade",
       "length": "Krótkie",
       "style": "Nowoczesny",
@@ -90,7 +90,7 @@
       "emoji": "⬆️",
       "type": "child",
       "parentIds": [
-        1
+        10
       ],
       "attributes": {
         "sides": "high-fade",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 104,
       "name": "Taper Fade",
       "length": "Krótkie",
       "style": "Konserwatywny",
@@ -113,7 +113,7 @@
       "emoji": "🔻",
       "type": "child",
       "parentIds": [
-        1
+        10
       ],
       "attributes": {
         "sides": "taper-fade",
@@ -123,7 +123,7 @@
       }
     },
     {
-      "id": 6,
+      "id": 105,
       "name": "Drop Fade",
       "length": "Krótkie",
       "style": "Nowoczesny",
@@ -136,7 +136,7 @@
       "emoji": "🟡",
       "type": "child",
       "parentIds": [
-        1
+        10
       ],
       "attributes": {
         "sides": "",
@@ -146,7 +146,7 @@
       }
     },
     {
-      "id": 7,
+      "id": 106,
       "name": "Burst Fade",
       "length": "Krótkie",
       "style": "Alternatywny",
@@ -159,7 +159,7 @@
       "emoji": "🌀",
       "type": "child",
       "parentIds": [
-        1
+        10
       ],
       "attributes": {
         "sides": "",
@@ -169,7 +169,7 @@
       }
     },
     {
-      "id": 8,
+      "id": 1,
       "name": "Pompadour",
       "length": "Krótkie, Średnie",
       "style": "Klasyczny, Retro",
@@ -183,9 +183,9 @@
       "emoji": "👨‍🦱",
       "type": "parent",
       "childrenIds": [
-        9,
-        10,
-        11
+        11,
+        12,
+        13
       ],
       "attributes": {
         "sides": "mid-fade",
@@ -195,247 +195,7 @@
       }
     },
     {
-      "id": 9,
-      "name": "Pompadour Nowoczesny",
-      "length": "Średnie",
-      "style": "Nowoczesny",
-      "description": "Współczesna interpretacja klasycznego pompadoura z teksturowaną górą.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/short_quiff.jpg",
-      "emoji": "👨‍💼",
-      "type": "child",
-      "parentIds": [
-        8
-      ],
-      "attributes": {
-        "sides": "high-fade",
-        "top": "with-volume",
-        "bangs": "swept",
-        "style": "modern"
-      }
-    },
-    {
-      "id": 10,
-      "name": "Pompadour z Przedziałkiem",
-      "length": "Średnie",
-      "style": "Klasyczny",
-      "description": "Elegancki pompadour z wyraźnym przedziałkiem z boku.",
-      "tags": [
-        "Średnie",
-        "Klasyczny"
-      ],
-      "image": "images/side_part.jpg",
-      "emoji": "🎩",
-      "type": "child",
-      "parentIds": [
-        8
-      ],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "with-volume",
-        "bangs": "swept",
-        "style": "classic"
-      }
-    },
-    {
-      "id": 11,
-      "name": "Pompadour Textured",
-      "length": "Średnie",
-      "style": "Nowoczesny",
-      "description": "Pompadour z silnie teksturowaną górą dla naturalnego wyglądu.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/textured_fringe.jpg",
-      "emoji": "🌊",
-      "type": "child",
-      "parentIds": [
-        8,
-        16
-      ],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "textured",
-        "bangs": "with-texture",
-        "style": "modern"
-      }
-    },
-    {
-      "id": 12,
-      "name": "Curtain Bangs",
-      "length": "Średnie",
-      "style": "Nowoczesny, Retro",
-      "description": "Długa grzywka podzielona na dwie części, opadająca po bokach. Powrót stylu lat 90.",
-      "tags": [
-        "Średnie",
-        "Retro",
-        "Nowoczesny"
-      ],
-      "image": "images/curtain_bangs.jpg",
-      "emoji": "👨",
-      "type": "parent",
-      "childrenIds": [
-        13,
-        14,
-        15
-      ],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "textured",
-        "bangs": "curtain",
-        "style": "modern"
-      }
-    },
-    {
-      "id": 13,
-      "name": "Curtain Bangs 2",
-      "length": "Średnie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/curtain_bangs2.jpg",
-      "emoji": "💇‍♂️",
-      "type": "child",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "textured",
-        "bangs": "curtain",
-        "style": "modern"
-      },
-      "parentIds": [
-        12
-      ]
-    },
-    {
-      "id": 14,
-      "name": "Curtain Bangs 3",
-      "length": "Średnie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/curtain_bangs3.jpg",
-      "emoji": "💇‍♂️",
-      "type": "child",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "textured",
-        "bangs": "curtain",
-        "style": "modern"
-      },
-      "parentIds": [
-        12
-      ]
-    },
-    {
-      "id": 15,
-      "name": "Middle Part",
-      "length": "Średnie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/middle_part.jpg",
-      "emoji": "💇‍♂️",
-      "type": "child",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "medium",
-        "bangs": "curtain",
-        "style": "modern"
-      },
-      "parentIds": [
-        12
-      ]
-    },
-    {
-      "id": 16,
-      "name": "Quiff",
-      "length": "Średnie",
-      "style": "Nowoczesny",
-      "description": "Uniesiona góra z objętością, cieniowane boki. Połączenie pompadoura i flattopa.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/quiff.jpg",
-      "emoji": "🧑",
-      "type": "parent",
-      "childrenIds": [
-        17,
-        18
-      ],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "with-volume",
-        "bangs": "with-texture",
-        "style": "modern"
-      }
-    },
-    {
-      "id": 17,
-      "name": "Textured Quiff",
-      "length": "Średnie",
-      "style": "Casualowy",
-      "description": "Quiff z mocno teksturowanymi włosami dla naturalnego efektu.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/quifff.jpg",
-      "emoji": "🌿",
-      "type": "child",
-      "parentIds": [
-        16,
-        8
-      ],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "textured",
-        "bangs": "with-texture",
-        "style": "modern"
-      }
-    },
-    {
-      "id": 18,
-      "name": "Short Quiff",
-      "length": "Krótkie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Krótkie",
-        "Nowoczesny"
-      ],
-      "image": "images/short_quiff.jpg",
-      "emoji": "💇‍♂️",
-      "type": "child",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "short",
-        "bangs": "none",
-        "style": "modern"
-      },
-      "parentIds": [
-        16
-      ]
-    },
-    {
-      "id": 19,
+      "id": 2,
       "name": "Buzz Cut",
       "length": "Krótkie",
       "style": "Nowoczesny, Sportowy",
@@ -449,8 +209,8 @@
       "emoji": "👨‍🦲",
       "type": "parent",
       "childrenIds": [
-        20,
-        21
+        14,
+        15
       ],
       "attributes": {
         "sides": "uniform",
@@ -460,53 +220,54 @@
       }
     },
     {
-      "id": 20,
-      "name": "Induction Cut",
-      "length": "Bardzo krótkie",
-      "style": "Militarny",
-      "description": "Ekstremalnie krótka wersja buzz cut, militarny styl.",
+      "id": 3,
+      "name": "Curtain Bangs",
+      "length": "Średnie",
+      "style": "Nowoczesny, Retro",
+      "description": "Długa grzywka podzielona na dwie części, opadająca po bokach. Powrót stylu lat 90.",
       "tags": [
-        "Krótkie",
-        "Sportowy"
+        "Średnie",
+        "Retro",
+        "Nowoczesny"
       ],
-      "image": "images/buzz_cut2.jpg",
-      "emoji": "⚔️",
-      "type": "child",
-      "parentIds": [
-        19
+      "image": "images/curtain_bangs.jpg",
+      "emoji": "👨",
+      "type": "parent",
+      "childrenIds": [
+        24,
+        25,
+        30
       ],
       "attributes": {
-        "sides": "uniform",
-        "top": "short",
-        "bangs": "none",
+        "sides": "mid-fade",
+        "top": "textured",
+        "bangs": "curtain",
         "style": "modern"
       }
     },
     {
-      "id": 21,
-      "name": "Butch Cut",
-      "length": "Krótkie",
-      "style": "Sportowy",
-      "description": "Nieco dłuższy buzz cut, równy na całej głowie.",
+      "id": 4,
+      "name": "Man Bun",
+      "length": "Długie",
+      "style": "Alternatywny",
+      "description": "Długie włosy związane w kok na czubku głowy. Wyrazisty, nowoczesny styl.",
       "tags": [
-        "Krótkie",
-        "Sportowy"
+        "Długie",
+        "Alternatywny"
       ],
-      "image": "images/crew_cut.jpg",
-      "emoji": "🏋️",
-      "type": "child",
-      "parentIds": [
-        19
-      ],
+      "image": "images/man_bun.jpg",
+      "emoji": "👨‍🦰",
+      "type": "parent",
+      "childrenIds": [],
       "attributes": {
-        "sides": "uniform",
-        "top": "short",
-        "bangs": "none",
-        "style": "modern"
+        "sides": "long",
+        "top": "long",
+        "bangs": "long",
+        "style": "alternative"
       }
     },
     {
-      "id": 22,
+      "id": 5,
       "name": "Slick Back",
       "length": "Średnie",
       "style": "Klasyczny",
@@ -519,7 +280,7 @@
       "emoji": "🧔",
       "type": "parent",
       "childrenIds": [
-        23
+        35
       ],
       "attributes": {
         "sides": "mid-fade",
@@ -529,31 +290,7 @@
       }
     },
     {
-      "id": 23,
-      "name": "Slick Back 2",
-      "length": "Średnie",
-      "style": "Klasyczny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Średnie",
-        "Klasyczny"
-      ],
-      "image": "images/slick_back2.jpg",
-      "emoji": "💇‍♂️",
-      "type": "child",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "slick",
-        "bangs": "swept",
-        "style": "classic"
-      },
-      "parentIds": [
-        22
-      ]
-    },
-    {
-      "id": 24,
+      "id": 6,
       "name": "Undercut",
       "length": "Średnie",
       "style": "Nowoczesny, Alternatywny",
@@ -567,9 +304,9 @@
       "emoji": "👨‍💼",
       "type": "parent",
       "childrenIds": [
-        25,
-        26,
-        27
+        16,
+        17,
+        18
       ],
       "attributes": {
         "sides": "undercut",
@@ -579,7 +316,190 @@
       }
     },
     {
-      "id": 25,
+      "id": 7,
+      "name": "Quiff",
+      "length": "Średnie",
+      "style": "Nowoczesny",
+      "description": "Uniesiona góra z objętością, cieniowane boki. Połączenie pompadoura i flattopa.",
+      "tags": [
+        "Średnie",
+        "Nowoczesny"
+      ],
+      "image": "images/quiff.jpg",
+      "emoji": "🧑",
+      "type": "parent",
+      "childrenIds": [
+        19,
+        33
+      ],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "with-volume",
+        "bangs": "with-texture",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Crew Cut",
+      "length": "Krótkie",
+      "style": "Klasyczny",
+      "description": "Krótka, równomierna fryzura, nieco dłuższa na górze. Praktyczna i ponadczasowa.",
+      "tags": [
+        "Krótkie",
+        "Klasyczny"
+      ],
+      "image": "images/crew_cut.jpg",
+      "emoji": "👨‍✈️",
+      "type": "parent",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "low-fade",
+        "top": "short",
+        "bangs": "none",
+        "style": "classic"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Mohawk",
+      "length": "Średnie",
+      "style": "Alternatywny",
+      "description": "Wyrazisty pas włosów na środku głowy z ogolonymi bokami. Odważny, buntowniczy styl.",
+      "tags": [
+        "Średnie",
+        "Alternatywny"
+      ],
+      "image": "images/mohawk.jpg",
+      "emoji": "🤘",
+      "type": "parent",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "undercut",
+        "top": "with-volume",
+        "bangs": "none",
+        "style": "alternative"
+      }
+    },
+    
+    {
+      "id": 11,
+      "name": "Pompadour Nowoczesny",
+      "length": "Średnie",
+      "style": "Nowoczesny",
+      "description": "Współczesna interpretacja klasycznego pompadoura z teksturowaną górą.",
+      "tags": [
+        "Średnie",
+        "Nowoczesny"
+      ],
+      "image": "images/short_quiff.jpg",
+      "emoji": "👨‍💼",
+      "type": "child",
+      "parentIds": [
+        1
+      ],
+      "attributes": {
+        "sides": "high-fade",
+        "top": "with-volume",
+        "bangs": "swept",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Pompadour z Przedziałkiem",
+      "length": "Średnie",
+      "style": "Klasyczny",
+      "description": "Elegancki pompadour z wyraźnym przedziałkiem z boku.",
+      "tags": [
+        "Średnie",
+        "Klasyczny"
+      ],
+      "image": "images/side_part.jpg",
+      "emoji": "🎩",
+      "type": "child",
+      "parentIds": [
+        1
+      ],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "with-volume",
+        "bangs": "swept",
+        "style": "classic"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Pompadour Textured",
+      "length": "Średnie",
+      "style": "Nowoczesny",
+      "description": "Pompadour z silnie teksturowaną górą dla naturalnego wyglądu.",
+      "tags": [
+        "Średnie",
+        "Nowoczesny"
+      ],
+      "image": "images/textured_fringe.jpg",
+      "emoji": "🌊",
+      "type": "child",
+      "parentIds": [
+        1,
+        7
+      ],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "textured",
+        "bangs": "with-texture",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Induction Cut",
+      "length": "Bardzo krótkie",
+      "style": "Militarny",
+      "description": "Ekstremalnie krótka wersja buzz cut, militarny styl.",
+      "tags": [
+        "Krótkie",
+        "Sportowy"
+      ],
+      "image": "images/buzz_cut2.jpg",
+      "emoji": "⚔️",
+      "type": "child",
+      "parentIds": [
+        2
+      ],
+      "attributes": {
+        "sides": "uniform",
+        "top": "short",
+        "bangs": "none",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Butch Cut",
+      "length": "Krótkie",
+      "style": "Sportowy",
+      "description": "Nieco dłuższy buzz cut, równy na całej głowie.",
+      "tags": [
+        "Krótkie",
+        "Sportowy"
+      ],
+      "image": "images/crew_cut.jpg",
+      "emoji": "🏋️",
+      "type": "child",
+      "parentIds": [
+        2
+      ],
+      "attributes": {
+        "sides": "uniform",
+        "top": "short",
+        "bangs": "none",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 16,
       "name": "Undercut Slicked Back",
       "length": "Średnie",
       "style": "Nowoczesny, Elegancki",
@@ -592,7 +512,7 @@
       "emoji": "💼",
       "type": "child",
       "parentIds": [
-        24
+        6
       ],
       "attributes": {
         "sides": "undercut",
@@ -602,7 +522,7 @@
       }
     },
     {
-      "id": 26,
+      "id": 17,
       "name": "Undercut Messy",
       "length": "Średnie",
       "style": "Casualowy",
@@ -615,7 +535,7 @@
       "emoji": "🎸",
       "type": "child",
       "parentIds": [
-        24
+        6
       ],
       "attributes": {
         "sides": "undercut",
@@ -625,7 +545,7 @@
       }
     },
     {
-      "id": 27,
+      "id": 18,
       "name": "Disconnected Undercut",
       "length": "Średnie",
       "style": "Nowoczesny, Ostry",
@@ -638,7 +558,7 @@
       "emoji": "⚡",
       "type": "child",
       "parentIds": [
-        24
+        6
       ],
       "attributes": {
         "sides": "undercut",
@@ -648,33 +568,31 @@
       }
     },
     {
-      "id": 28,
-      "name": "French Crop",
-      "length": "Krótkie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "id": 19,
+      "name": "Textured Quiff",
+      "length": "Średnie",
+      "style": "Casualowy",
+      "description": "Quiff z mocno teksturowanymi włosami dla naturalnego efektu.",
       "tags": [
-        "Krótkie",
+        "Średnie",
         "Nowoczesny"
       ],
-      "image": "images/french_crop.jpg",
-      "emoji": "💇‍♂️",
-      "type": "parent",
-      "childrenIds": [
-        32,
-        31,
-        30,
-        29
+      "image": "images/quifff.jpg",
+      "emoji": "🌿",
+      "type": "child",
+      "parentIds": [
+        7,
+        1
       ],
       "attributes": {
         "sides": "mid-fade",
-        "top": "short",
-        "bangs": "none",
+        "top": "textured",
+        "bangs": "with-texture",
         "style": "modern"
       }
     },
     {
-      "id": 29,
+      "id": 20,
       "name": "Caesar Cut",
       "length": "Krótkie",
       "style": "Nowoczesny",
@@ -698,7 +616,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": 21,
       "name": "Crop 2",
       "length": "Krótkie",
       "style": "Nowoczesny",
@@ -722,7 +640,7 @@
       ]
     },
     {
-      "id": 31,
+      "id": 22,
       "name": "Crop 3",
       "length": "Krótkie",
       "style": "Nowoczesny",
@@ -742,12 +660,286 @@
         "style": "modern"
       },
       "parentIds": [
-        30,
+        21,
         28
       ]
     },
     {
+      "id": 23,
+      "name": "Curly",
+      "length": "Średnie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Średnie",
+        "Nowoczesny"
+      ],
+      "image": "images/curly.jpg",
+      "emoji": "💇‍♂️",
+      "type": "parent",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "curly",
+        "bangs": "none",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 24,
+      "name": "Curtain Bangs 2",
+      "length": "Średnie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Średnie",
+        "Nowoczesny"
+      ],
+      "image": "images/curtain_bangs2.jpg",
+      "emoji": "💇‍♂️",
+      "type": "child",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "textured",
+        "bangs": "curtain",
+        "style": "modern"
+      },
+      "parentIds": [
+        3
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Curtain Bangs 3",
+      "length": "Średnie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Średnie",
+        "Nowoczesny"
+      ],
+      "image": "images/curtain_bangs3.jpg",
+      "emoji": "💇‍♂️",
+      "type": "child",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "textured",
+        "bangs": "curtain",
+        "style": "modern"
+      },
+      "parentIds": [
+        3
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Flat Top",
+      "length": "Krótkie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Krótkie",
+        "Nowoczesny"
+      ],
+      "image": "images/flat_top.jpg",
+      "emoji": "💇‍♂️",
+      "type": "parent",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "flat",
+        "bangs": "none",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 27,
+      "name": "Flufy Hair",
+      "length": "Średnie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Średnie",
+        "Nowoczesny"
+      ],
+      "image": "images/flufy_hair.jpeg",
+      "emoji": "💇‍♂️",
+      "type": "parent",
+      "childrenIds": [
+        37
+      ],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "fluffy",
+        "bangs": "none",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 28,
+      "name": "French Crop",
+      "length": "Krótkie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Krótkie",
+        "Nowoczesny"
+      ],
+      "image": "images/french_crop.jpg",
+      "emoji": "💇‍♂️",
+      "type": "parent",
+      "childrenIds": [
+        36,
+        22,
+        21,
+        20
+      ],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "short",
+        "bangs": "none",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 30,
+      "name": "Middle Part",
+      "length": "Średnie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Średnie",
+        "Nowoczesny"
+      ],
+      "image": "images/middle_part.jpg",
+      "emoji": "💇‍♂️",
+      "type": "child",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "medium",
+        "bangs": "curtain",
+        "style": "modern"
+      },
+      "parentIds": [
+        3
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Mod Cut",
+      "length": "Średnie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Średnie",
+        "Nowoczesny"
+      ],
+      "image": "images/mod_cut.jpg",
+      "emoji": "💇‍♂️",
+      "type": "parent",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "medium",
+        "bangs": "none",
+        "style": "modern"
+      }
+    },
+    {
       "id": 32,
+      "name": "Modern Mullet",
+      "length": "Długie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Długie",
+        "Nowoczesny"
+      ],
+      "image": "images/modern_mullet.jpg",
+      "emoji": "💇‍♂️",
+      "type": "parent",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "long",
+        "bangs": "none",
+        "style": "modern"
+      }
+    },
+    {
+      "id": 33,
+      "name": "Short Quiff",
+      "length": "Krótkie",
+      "style": "Nowoczesny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Krótkie",
+        "Nowoczesny"
+      ],
+      "image": "images/short_quiff.jpg",
+      "emoji": "💇‍♂️",
+      "type": "child",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "short",
+        "bangs": "none",
+        "style": "modern"
+      },
+      "parentIds": [
+        7
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Side Part 2",
+      "length": "Średnie",
+      "style": "Klasyczny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Średnie",
+        "Klasyczny"
+      ],
+      "image": "images/side_part_2.jpg",
+      "emoji": "💇‍♂️",
+      "type": "parent",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "medium",
+        "bangs": "none",
+        "style": "classic"
+      }
+    },
+    {
+      "id": 35,
+      "name": "Slick Back 2",
+      "length": "Średnie",
+      "style": "Klasyczny",
+      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
+      "tags": [
+        "Średnie",
+        "Klasyczny"
+      ],
+      "image": "images/slick_back2.jpg",
+      "emoji": "💇‍♂️",
+      "type": "child",
+      "childrenIds": [],
+      "attributes": {
+        "sides": "mid-fade",
+        "top": "slick",
+        "bangs": "swept",
+        "style": "classic"
+      },
+      "parentIds": [
+        5
+      ]
+    },
+    {
+      "id": 36,
       "name": "Textured Crop 2",
       "length": "Krótkie",
       "style": "Nowoczesny",
@@ -771,72 +963,7 @@
       ]
     },
     {
-      "id": 33,
-      "name": "Man Bun",
-      "length": "Długie",
-      "style": "Alternatywny",
-      "description": "Długie włosy związane w kok na czubku głowy. Wyrazisty, nowoczesny styl.",
-      "tags": [
-        "Długie",
-        "Alternatywny"
-      ],
-      "image": "images/man_bun.jpg",
-      "emoji": "👨‍🦰",
-      "type": "parent",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "long",
-        "top": "long",
-        "bangs": "long",
-        "style": "alternative"
-      }
-    },
-    {
-      "id": 34,
-      "name": "Crew Cut",
-      "length": "Krótkie",
-      "style": "Klasyczny",
-      "description": "Krótka, równomierna fryzura, nieco dłuższa na górze. Praktyczna i ponadczasowa.",
-      "tags": [
-        "Krótkie",
-        "Klasyczny"
-      ],
-      "image": "images/crew_cut.jpg",
-      "emoji": "👨‍✈️",
-      "type": "parent",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "low-fade",
-        "top": "short",
-        "bangs": "none",
-        "style": "classic"
-      }
-    },
-    {
-      "id": 35,
-      "name": "Flufy Hair",
-      "length": "Średnie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/flufy_hair.jpeg",
-      "emoji": "💇‍♂️",
-      "type": "parent",
-      "childrenIds": [
-        36
-      ],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "fluffy",
-        "bangs": "none",
-        "style": "modern"
-      }
-    },
-    {
-      "id": 36,
+      "id": 37,
       "name": "Textured Fringe 2",
       "length": "Średnie",
       "style": "Nowoczesny",
@@ -856,154 +983,11 @@
         "style": "modern"
       },
       "parentIds": [
-        35
+        27
       ]
-    },
-    {
-      "id": 37,
-      "name": "Curly",
-      "length": "Średnie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/curly.jpg",
-      "emoji": "💇‍♂️",
-      "type": "parent",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "curly",
-        "bangs": "none",
-        "style": "modern"
-      }
     },
     {
       "id": 38,
-      "name": "Alternatywne",
-      "length": "Średnie",
-      "style": "Alternatywny",
-      "description": "Wyrazisty pas włosów na środku głowy z ogolonymi bokami. Odważny, buntowniczy styl.",
-      "tags": [
-        "Średnie",
-        "Alternatywny"
-      ],
-      "image": "images/mohawk.jpg",
-      "emoji": "🤘",
-      "type": "parent",
-      "childrenIds": [
-        39,
-        40,
-        44
-      ],
-      "attributes": {
-        "sides": "undercut",
-        "top": "with-volume",
-        "bangs": "none",
-        "style": "alternative"
-      }
-    },
-    {
-      "id": 39,
-      "name": "Flat Top",
-      "length": "Krótkie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Krótkie",
-        "Nowoczesny"
-      ],
-      "image": "images/flat_top.jpg",
-      "emoji": "💇‍♂️",
-      "type": "child",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "flat",
-        "bangs": "none",
-        "style": "modern"
-      },
-      "parentIds": [
-        38
-      ]
-    },
-    {
-      "id": 40,
-      "name": "Mohawk",
-      "length": "Średnie",
-      "style": "Alternatywny",
-      "description": "Wyrazisty pas włosów na środku głowy z ogolonymi bokami. Odważny, buntowniczy styl.",
-      "tags": [
-        "Średnie",
-        "Alternatywny"
-      ],
-      "image": "images/mohawk.jpg",
-      "emoji": "🤘",
-      "type": "child",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "undercut",
-        "top": "with-volume",
-        "bangs": "none",
-        "style": "alternative"
-      },
-      "parentIds": [
-        38
-      ]
-    },
-    {
-      "id": 41,
-      "name": "Long",
-      "length": "Długie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Długie",
-        "Nowoczesny"
-      ],
-      "image": "images/wolf_cut.jpg",
-      "emoji": "💇‍♂️",
-      "type": "parent",
-      "childrenIds": [
-        43,
-        42
-      ],
-      "attributes": {
-        "sides": "long",
-        "top": "long",
-        "bangs": "none",
-        "style": "modern"
-      },
-      "parentIds": []
-    },
-    {
-      "id": 42,
-      "name": "Mod Cut",
-      "length": "Średnie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Średnie",
-        "Nowoczesny"
-      ],
-      "image": "images/mod_cut.jpg",
-      "emoji": "💇‍♂️",
-      "type": "child",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "medium",
-        "bangs": "none",
-        "style": "modern"
-      },
-      "parentIds": [
-        41
-      ]
-    },
-    {
-      "id": 43,
       "name": "Wolf Cut",
       "length": "Długie",
       "style": "Nowoczesny",
@@ -1014,61 +998,13 @@
       ],
       "image": "images/wolf_cut.jpg",
       "emoji": "💇‍♂️",
-      "type": "child",
+      "type": "parent",
       "childrenIds": [],
       "attributes": {
         "sides": "long",
         "top": "long",
         "bangs": "none",
         "style": "modern"
-      },
-      "parentIds": [
-        41
-      ]
-    },
-    {
-      "id": 44,
-      "name": "Modern Mullet",
-      "length": "Długie",
-      "style": "Nowoczesny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Długie",
-        "Nowoczesny"
-      ],
-      "image": "images/modern_mullet.jpg",
-      "emoji": "💇‍♂️",
-      "type": "child",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "long",
-        "bangs": "none",
-        "style": "modern"
-      },
-      "parentIds": [
-        38
-      ]
-    },
-    {
-      "id": 45,
-      "name": "Side Part 2",
-      "length": "Średnie",
-      "style": "Klasyczny",
-      "description": "Fryzura dodana automatycznie na podstawie zdjęcia.",
-      "tags": [
-        "Średnie",
-        "Klasyczny"
-      ],
-      "image": "images/side_part_2.jpg",
-      "emoji": "💇‍♂️",
-      "type": "parent",
-      "childrenIds": [],
-      "attributes": {
-        "sides": "mid-fade",
-        "top": "medium",
-        "bangs": "none",
-        "style": "classic"
       }
     }
   ]

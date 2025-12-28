@@ -1,3 +1,15 @@
+/* Podświetlenie dzieci i rodzeństwa w admin */
+.admin-item.highlighted {
+    background: #388e3c !important;
+    box-shadow: 0 0 0 2px #66bb6a;
+    color: #fff;
+}
+/* Podświetlenie parenta (ciemniejsze) */
+.admin-item.parent-highlighted {
+    background: #1b5e20 !important;
+    box-shadow: 0 0 0 2px #388e3c;
+    color: #fff;
+}
 /* ===== RESETOWANIE I PODSTAWOWE STYLE ===== */
 * {
     margin: 0;
